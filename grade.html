@@ -1,0 +1,190 @@
+<! doctype html>
+<html>
+<head><title></title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet"  href="css/bootstrap.min.css"/>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="styles.css"/>
+  
+    
+    
+    
+     </head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color:#A45C40">
+      <div class="container-fluid">
+  <a class="navbar-brand" href="#" style="color:#F6EEE0">MathCalc</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+<span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+      <a class="nav-link" href="index.html" style="padding-right: 40px; color:#F6EEE0 ">Home</a>
+            </li>
+        <li class="nav-item">  
+      <a class="nav-link" href="task1.html" style="padding-right: 40px; color:#F6EEE0">Password Generator</a>
+             </li>
+           <li class="nav-item"> 
+     <a class="nav-link" href="squareroot.html" style="padding-right: 40px; color:#F6EEE0">Square root</a>
+               </li>
+            <li class="nav-item"> 
+      <a class="nav-link" href="grade.html" style="color:#F6EEE0">Grade</a>
+                 </li>
+          
+         
+           </ul>
+     
+    </div>
+  </div>
+         
+</nav>
+    
+   
+    <div id="welcome1"> 
+       
+    </div>
+  
+    <div class="d-grid gap-2 col-6 mx-auto">
+  <button id="res" class="btn btn-primary" type="button" >Result</button>
+ 
+</div>
+</body>
+
+
+
+<script src="./student.js">
+</script> 
+<script>
+    
+    var arr = [];
+    var myArray = [];
+  function getData(){
+   const rows = 5;
+    for(let i = 0; i<rows; i++){
+             const name = prompt("enter name");
+             const score = prompt("enter score");
+             const cgpa = prompt("enter cgpa");
+            var student = new Student(name, score, cgpa);
+            arr.push(student);       
+    }
+    console.log(arr);
+     for(let i = 0; i<rows; i++){
+    document.getElementById("welcome1").innerHTML += (arr[i].name + " : " + arr[i].score + " : " + arr[i].cgpa + "<br>");  
+     }
+     }
+    
+    
+    
+ function average(values){
+  var sum = values.reduce(function(sum, val){
+    return sum + val;
+  }, 0);
+  var avg = sum / values.length;
+  return avg;
+}                                                     
+   
+    
+    
+ function getdev(arr){
+        var myArray = [];
+        var sum = 0; 
+       var mean;
+    var value = myArray[i];
+for (var i = 0; i < arr.length; i++) {
+    myArray.push(arr[i].score);
+    sum = sum + parseFloat(myArray[i]);
+    mean = sum/myArray.length;   
+
+    var squareDiffs = myArray.map(function(value){
+    var diff = value - mean;
+    var sqrDiff = diff * diff;
+    var b = sqrDiff;
+         return b;
+  });
+ 
+  var avgSquareDiff = average(squareDiffs);
+  var stdDev = Math.sqrt(avgSquareDiff);
+     var first = mean + (2 * stdDev);
+    var second = mean + stdDev;
+     
+}
+        
+    for (let i = 0; i < arr.length; i++){
+        if(parseFloat(arr[i].score) > parseFloat(mean)){
+           document.getElementById("welcome1").innerHTML += arr[i].name +  " " + "PASSED" + "<br>";  
+        }
+         else{
+              document.getElementById("welcome1").innerHTML += arr[i].name +  "  " + "FAILED" + "<br>";   
+         }   
+      } 
+          
+         for (let i = 0; i < arr.length; i++) {
+            if(parseFloat(arr[i].score) > first ) {
+                document.getElementById("welcome1").innerHTML += arr[i].name +  " : " + "A" + "<br>";  
+            }
+              else if (parseFloat(arr[i].score) > second){
+                  
+                document.getElementById("welcome1").innerHTML += arr[i].name +  " : " + "B" + "<br>"; 
+              }
+               else if(parseFloat(arr[i].score) > mean ) {
+                 document.getElementById("welcome1").innerHTML += arr[i].name +  " : " + "C" + "<br>";   
+            }
+               else if (parseFloat(arr[i].score) == mean){
+                document.getElementById("welcome1").innerHTML += arr[i].name +  " : " + "D" + "<br>"; 
+            } 
+             
+         else {
+               document.getElementById("welcome1").innerHTML += arr[i].name +  " : " + "F" + "<br>"; 
+         }
+     }    
+     }                  
+        
+ 
+   
+    
+    
+        
+     
+    
+    
+  
+    
+    
+           
+         getData();
+        document.getElementById("res").onclick= function(){
+         getdev(arr);
+            
+        }
+           
+         
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

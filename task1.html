@@ -1,0 +1,225 @@
+<! doctype html>
+<html>
+<head><title></title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet"  href="css/bootstrap.min.css"/>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="styles.css"/>
+  
+    
+    
+    
+     </head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color:#A45C40">
+      <div class="container-fluid">
+  <a class="navbar-brand" href="#" style="color:#F6EEE0">MathCalc</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+<span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+      <a class="nav-link" href="index.html" style="padding-right: 40px; color:#F6EEE0 ">Home</a>
+            </li>
+        <li class="nav-item">  
+      <a class="nav-link" href="task1.html" style="padding-right: 40px; color:#F6EEE0">Password Generator</a>
+             </li>
+           <li class="nav-item"> 
+     <a class="nav-link" href="squareroot.html" style="padding-right: 40px; color:#F6EEE0">Square root</a>
+               </li>
+            <li class="nav-item"> 
+      <a class="nav-link" href="grade.html" style="color:#F6EEE0">Grade</a>
+                 </li>
+          
+         
+           </ul>
+     
+    </div>
+  </div>
+         
+</nav>
+    
+
+    <div id="welcome"> 
+        <p style="font-size: 30px; text-align: center">WELCOME!</p>
+        <p id="instruction">Instructions to follow</p>
+        <ul>
+        <li> After clicking on the <strong>proceed button</strong> ,you input your <strong>First name only</strong> on the left input</li>
+        <li>You then input your <strong>Birth day only</strong> on the right input</li>
+        <li> Lastly, click on <strong>Generate button </strong> to generate your password</li>
+        </ul>
+       
+        </div>
+     <div class="container-fluid padding">
+    <div class="row padding">
+    <div class=" bigdiv">
+        <input type="text" id="name" name="name" placeholder="enter the name"  />
+        <input type="number" id="day" name="number" placeholder="enter the birthday" />
+</div>
+         </div>
+    </div>
+    
+    
+     <div class="container-fluid padding">
+ <div class="row padding">
+   <div class="d-grid gap-2 col-6 mx-auto">
+  <button id="generate" class="btn btn-primary" type="button" >Proceed</button>
+ 
+</div>
+    
+    </div>
+    </div>
+    
+  <script>
+  
+      
+
+    
+      
+      
+      function hide(Id){
+    document.getElementById(Id).style.display = "none";   
+}
+
+// function show an element
+
+function show(Id){
+    document.getElementById(Id).style.display = "block";   
+}
+
+      
+      
+    function nextpage(){
+    show("name");
+    show("day");
+    document.getElementById("generate").innerText="Generate";
+    document.getElementById("welcome").innerText="";
+}
+      
+      
+        
+     document.getElementById("generate").onclick = function() {
+     
+     
+         if(this.innerText == "Generate"){
+             document.getElementById("welcome").innerText =  generate();
+         }
+
+         else {
+             nextpage();
+         }
+         
+
+        
+    
+         
+    }
+    
+             
+    
+      
+      function getDayOfBirth(){
+        var day  = document.getElementById("day").value;
+          var date = 31 - day;
+          if (date < 10){
+              return ("0"+ date);
+              
+          }
+           else{
+               return date;
+           }
+      }
+
+       function sumAlphabetPositions() {
+            var text = document.getElementById("name").value.toLowerCase();
+            var chari,
+            arr = [],
+            alphabet = "abcdefghijklmnopqrstuvwxyz",
+            i;
+
+        for (var i = 0; i < text.length; i++){
+            chari = text[i].toLowerCase();
+            if (alphabet.indexOf(chari) !== -1){
+                arr.push(alphabet.indexOf(chari) + 1);
+            }
+        }
+       
+    //return arr;
+        
+        
+        var sum = arr.reduce(function(a, b){
+            return a + b;
+        }, 0);
+       
+       //if the sum gives a 3 digit number i.e sum >=100
+       if(sum >= 100){
+           
+           
+           //568
+           //convert sum to string so as to get the last two digits
+           sum = sum + "";
+           var x = sum[sum.length - 2] + sum[sum.length - 1] ;
+           
+           return x;
+           
+       }
+       else {
+           return sum;
+       }
+       
+   }
+      
+    
+
+      
+      function generate(){
+        
+          var password = sumAlphabetPositions() + "" + getDayOfBirth();
+          return password;  
+          
+         // var password = sumAlphabetPositions().concat(getDayOfBirth());
+     
+          
+      }
+      
+   
+               
+      
+    
+    </script>
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

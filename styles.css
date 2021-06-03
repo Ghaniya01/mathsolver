@@ -1,0 +1,439 @@
+
+
+
+
+html, body{
+    height: 100%;
+    background-color: #F6EEE0;
+    font-family:"Times New Roman";
+}
+
+#container{
+           height: 100px; 
+           display: flex;
+           float: row;
+           text-align: center;
+          background-color: #F2C5E0; 
+          color: #870A30;
+          width: 100%;   
+       }
+
+ul li{
+    font-size: 20px;
+}
+.small1{
+    width: 350px;
+    height: 50px;
+    background-color: red;
+    flex: row;
+}
+    
+#start{
+        width: 250px;
+        height: 50px;
+        border-radius: 5%;
+        background-color: #EC8FD0;
+        margin: auto;
+        text-align: center;
+        font-size: 20px;
+        line-height: 50px;
+        color: #870A30;
+         border-bottom: solid;
+        border-bottom-color: #870A30;
+        cursor: pointer;
+        
+        
+    }
+ #welcome{
+        height: 350px;
+        width: 800px;
+        background-color: #E4B7A0;
+        margin: auto;
+        margin-top: 30px;
+        border-bottom: solid;
+        border-bottom-color: #870A30;
+        text-align: center;
+        font-size: 40px;
+        padding-top: 50px;
+        color: #A45C40;
+    } 
+
+#welcome1{
+       height: 350px;
+        width: 800px;
+        background-color: #E4B7A0;
+        margin: auto;
+        margin-top: 30px;
+        border-bottom: solid;
+        border-bottom-color: #870A30;
+        text-align: center;
+        font-size: 15px;
+        color: #A45C40;
+    } 
+
+
+.bigdiv{
+ display: flex;
+flex: row;
+margin-top: 20px;
+}
+
+#bigscreen{
+    display: flex;
+    flex: row;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#name{
+     display: none;
+     margin-left: 350px;
+     width: 250px;
+    text-align: center;
+     background-color: #F6EEE0;
+    color: #A45C40 ;
+}
+
+#day{
+     display: none;
+    margin-left: 180px;
+    width: 250px;
+    text-align: center;
+    background-color: #F6EEE0;
+    color:#A45C40 ;
+}
+
+
+#number{
+    display: none;
+    margin-left: 550px;
+    width: 250px;
+    text-align: center;
+     background-color: #F6EEE0;
+    color:#A45C40;
+}
+#generate{
+    margin-left: 210px; width: 250px; margin-top: 20px; height: 30px;
+    background-color: #A45C40;
+   
+}
+#res{
+    margin-left: 210px; width: 250px; margin-top: 20px; height: 30px;
+      background-color: #A45C40;
+   
+}
+.contact{
+    background-image: url(images/follow.jpg);
+    background-repeat: no-repeat;
+     background-position: center center;
+    background-size: cover;
+   height: 500px;
+    text-align: center; 
+    color: #870A30";
+       
+}
+.jumbotron{
+    height: 250px;
+    text-align: center;  
+    background-color: #E4B7A0; 
+    color: #A45C40;
+    text-align: center;
+    padding-top: 50px;
+}
+.jumbotron h1{
+     color: #A45C40;
+     font-weight: 500;
+    text-shadow: 1px 1px 1px 15px #000;
+}
+.graphics{
+    height: 250px; text-align: center; 
+      background-image: url(images/design2.jpg);
+        background-repeat: no-repeat;
+         background-position: center center;
+          background-size: cover;
+   
+    color: #870A30"
+}
+    
+     
+.padding{
+    margin-bottom: 20px;
+}
+       .nav-link{
+           color: #E7D2CC;
+           font-size: 18px;
+         
+       }
+
+     .btn a:hover{
+           text-decoration: none;
+           font-size: 40px;
+       }
+.  .nav-link:hover{
+           font-size: 20px;
+       }
+       a{
+           text-decoration: none;
+       }
+
+.card-title a:hover{
+    font-size: 40px;
+    color: #F6EEE0;
+}
+   
+.card-title{
+    color: #A45C40;
+}
+        .input{
+            width: 200px;
+            margin-left: 50px;
+            background-color:#F2C5E0;
+            color: #870A30;
+            border: none;
+
+        }
+    
+    
+    
+     .nav-link:hover{
+           font-size: 25px;
+       }
+    
+        .input a:hover{
+            text-decoration: none;
+            font-size: 20px;
+            color:#870A30; 
+        }
+    
+        .input a{
+            text-decoration: none;
+            color: #870A30; 
+        }
+
+
+.social a{
+font-size:15px;
+margin-right: 100px;
+    color: darkslategrey;
+}
+
+#footer{
+    color: darkslategrey;
+}
+
+    
+.navbar{
+  
+ width: 100%;
+}
+
+.card{
+     background-color:#E4B7A0;
+    margin-bottom: 20px;
+}
+.card-text{
+    color: #A45C40;
+   
+}
+#footer1{
+    text-align: center;
+    color: #870A30;
+}
+
+hr{
+    border-top: 0.5px solid darkslategrey;
+    width: 50%;
+
+}
+hr.light{
+    width: 100%;
+    
+}
+.row text-center{
+    color:#870A30; 
+}
+@media (max-width: 992px){
+   .social a{
+    font-size: 19px;;
+} 
+    .card-title a:hover{
+    font-size: 20px;
+}
+    .card-title{
+        padding: 50px;
+    } 
+    
+     #welcome{
+        height: 350px;
+        width: 800px;
+}
+    #welcome1{
+       height: 350px;
+        width: 800px;
+    } 
+    #name{
+     margin-left: 100px;
+     width: 250px;
+}
+    #day{
+    margin-left: 80px;
+    width: 250px;
+}
+    #generate{
+         margin-left: 180px; width: 250px; 
+    }
+    
+    #footer{
+    color: darkslategrey;
+        margin-left: 20px;
+}
+
+}
+@media (max-width: 768px){
+     .card-title a{
+       padding: 20px;
+    font-size: 20px;
+    } 
+    ul li{
+    font-size: 15px;
+}
+    .card-title a:hover{
+    font-size: 23px;
+}
+    .jumbotron h1{
+        font-size: 30px;
+       padding-top: 20px;
+    } 
+    .jumbotron p{
+        font-size: 10px;
+    }
+    .card-text{
+        font-size: 15px;
+    }
+    .container-fluid h5{
+        font-size: 15px;
+    }
+     .social a{
+    
+    font-size:17px;
+} 
+     #welcome{
+        height: 350px;
+        width: 500px;
+      
+}
+    
+    #name{
+     margin-left: 80px;
+     width: 200px;
+}
+    #day{
+    margin-left: 50px;
+    width: 200px;
+}
+    #generate{
+         margin-left: 80px;
+        width: 200px; 
+    }
+    
+    #res{
+         margin-left: 80px; 
+        width: 200px; 
+    }
+    
+    #number{
+   
+    width: 250px;
+}
+    
+    #footer{
+    color: darkslategrey;
+    margin-left: 20px;
+}
+
+    
+   #welcome1{
+        height: 350px;
+        width: 500px;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 15px;
+        
+    } 
+}
+@media (max-width: 576px){
+     .card-title a{
+         font-size:17px;
+        padding: 20px;
+    } 
+    ul li{
+    font-size: 12px;
+}
+    #instruction{
+        font-size: 15px;
+    }
+    .card-title a:hover{
+    font-size: 20px;
+}
+    .jumbotron h1{
+        font-size: 25px;
+        padding: 10px;
+    } 
+     .jumbotron p{
+        font-size: 9px;
+    }
+     .container-fluid h5{
+        font-size: 13px;
+    }
+    .topic h5{
+        font-size: 15px;
+    }
+    .social span{
+
+    font-size:15px;
+}
+    #start{
+        font-size: 10px;
+         width: 150px;
+        height: 20px;
+        
+    }
+     #welcome{
+        height: 300px;
+        width: 400px;
+       
+}
+    #name{
+     margin-left: 80px;
+     width: 150px;
+}
+    #day{
+    margin-left: 30px;
+    width: 150px;
+}
+    #generate{
+        margin-left: 50px;
+        width: 150px; 
+    }
+    #res{
+        margin-left: 50px;
+        width: 150px; 
+    }
+    
+    .social span {
+    color: darkslategrey;
+    margin-left: 5px;
+}
+
+     #number{
+    margin-left: 150px;
+    width: 250px;
+}
+    
+    welcome1{
+        height: 300px;
+        width: 400px;
+        text-align: center;
+        font-size: 12px;
+       
+    } 
+}

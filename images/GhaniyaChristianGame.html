@@ -1,0 +1,448 @@
+
+<!doctype html>
+<html>
+<head><title></title>
+<style>
+    #container{
+      height: 450px;
+        width: 800px;
+        border-radius: 5%;
+        background-color: #D43790;
+        margin: auto;
+        margin-top: 30px;
+         text-align: center;   
+        position: relative;
+         border-bottom: solid;
+        border-bottom-color: #870A30;
+    } 
+     #gameover{
+        height: 300px;
+        width: 850px;
+        background-color: lightblue;
+        margin: auto;
+        margin-top: 30px; 
+        position: absolute;
+         left: 250px;
+         right: 260px;
+         top: 60px;
+         color: #870A30;
+        text-align: center;
+        font-size: 50px;
+        line-height: 100px;
+         display: none;
+    } 
+    
+    
+    
+    #start{
+        width: 250px;
+        height: 50px;
+        border-radius: 5%;
+        background-color: #EC8FD0;
+        margin: auto;
+        margin-top: 20px;
+         text-align: center;
+        font-size: 30px;
+        line-height: 50px;
+        color: #870A30;
+         border-bottom: solid;
+        border-bottom-color: #870A30;
+        
+        
+    }
+    #screen{
+       height: 200px;
+        width:600px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 20px;
+        background-color: #F2C5E0;
+        border-radius: 5%;
+         text-align: center;
+        font-size: 80px;
+        line-height: 100px;
+        color: #870A30;
+         border-bottom: solid;
+        border-bottom-color: #870A30;
+        display: none;
+        
+    }
+    
+    #scorediv{
+       float: left;
+        height: 50px;
+        width:150px;
+        background-color: #870A30;
+        margin-left: 110px;
+        margin-top: 10px;
+        border-radius: 5%;
+         text-align: center;
+        font-size: 30px;
+        line-height: 50px;
+        color:#F2C5E0 ;
+         border-bottom: solid;
+        border-bottom-color: #EC8FD0;
+        display: none;
+      
+    }
+    
+     #timerdiv{
+       float: right;
+        height: 50px;
+        width:150px;
+        background-color: #870A30;
+        margin-left: 250px;
+        margin-right: 110px;
+        border-radius: 5%;
+         margin-top: 10px;
+          text-align: center;
+         font-size: 30px;
+        line-height: 50px;
+         color: #F2C5E0;
+          border-bottom: solid;
+        border-bottom-color:#EC8FD0;
+         display: none;
+         
+    }
+   
+    #instruction{
+       height: 50px;
+        width: 600px;
+        background-color: #870A30;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 3%;
+        position: relative;
+         text-align: center;
+        font-size: 30px;
+        line-height: 50px;
+        color: #F2C5E0;
+        border-bottom: solid;
+        border-bottom-color: #EC8FD0;
+       
+        display: none;
+     
+    } 
+     #right{
+       height: 50px;
+        width: 600px;
+        background-color: palegreen;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 3%;
+         margin-left: 100px;
+         position: absolute;
+         text-align: center;
+         font-size: 30px;
+        color: white;
+         line-height: 50px;
+        top: 210px;
+         display: none;
+         
+           
+         
+    } 
+     #wrong{
+       height: 50px;
+        width: 600px;
+        background-color:red;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 3%;
+         margin-left: 100px;
+         position: absolute;
+          text-align: center;
+         font-size: 30px;
+        line-height: 50px;
+         color: #F2C5E0;
+          top: 250px;
+        display: none;
+    } 
+    #textarea{
+       margin: auto;
+        width: 600px;
+        height: 150px;
+        background-color:#EC8FD0; 
+        margin-top: 10px;
+        border-radius: 3%;
+        display: none;
+       
+    }
+    #text{
+        height: 110px;
+        width: 550px;
+      
+        
+        border: none;
+        background-color:#F2C5E0;
+        color: #870A30;
+        text-align: center;
+        font-size: 50px;
+        display: none;
+        margin-left: 25px;
+        
+        
+    }
+    ul{
+        
+        
+        list-style-type: none;
+    }
+    
+    
+    </style>   
+    </head>
+<body>
+   <div id="container">
+      <div id="welcome"> 
+       <p style="color:#EC8FD0; font-size: 40px;padding-top: 20px">Welcome to pink Game!</p>
+       <p style="color: #EC8FD0; font-size: 25px">Carefully read the instructions before you click on <strong>proceed</strong> button</p>
+       <ul style="font-size: 20px; color:#EC8FD0 ">
+       <li>You have 60 secs to play the game.</li>
+       <li>For each correct typed word you see on the screen, you earn 5 points.</li>
+       <li>Ensure you type exactly the same word on screen in order to earn your point.</li>
+     <li>Be fast as possible in order to earn more point before the game ends.</li><br><br>
+       </ul>
+       <p style="font-size: 35px; color: #EC8FD0">BEST OF LUCK TO YOU!!!</p>
+       
+       </div>
+       
+       
+       
+       
+       <div id="scorediv">Score: <span id="scorevalue">0</span></div>
+        <div id="timerdiv">Time left: <span id="timevalue">0</span></div>
+    <div id="screen">
+        
+       </div>
+       
+    <div id="right">Right</div>
+       
+    <div id="wrong">Wrong</div>
+       
+    <div id="instruction">Type the word you see on the screen</div>
+       
+    <div id="textarea">
+      <textarea  id="text"></textarea>
+    </div> 
+    
+    </div>
+    <div id="start"> Proceed</div>
+    <div id="gameover"></div>
+    
+    
+    
+    <script>
+var playing = false;
+var score = 0;
+var count;
+var timeremaining;
+var correctAnswer;
+var words = ["Maize", "Karly", "Beans", "Bread", "Mango", "Balanced", "Quiet", "Run", "Sleep", "Talk", "Bag", "Sit", "Red", "Foam"];
+
+
+
+//function to hide element
+
+function hide(Id){
+    document.getElementById(Id).style.display = "none";   
+}
+
+// function show an element
+
+function show(Id){
+    document.getElementById(Id).style.display = "block";   
+}
+
+
+//function to start timer
+function startCountdown(){
+    count = setInterval(function(){
+        timeremaining -= 1;
+        document.getElementById("timerdiv").innerText = "Time" + " "+ "left:"+ timeremaining;
+        
+        
+        if(timeremaining == 0){// game over
+            stopCountdown();
+             show("gameover"); 
+             document.getElementById("gameover").innerHTML = "<p>Game over!!!</p><p>Your score is " + score + ".</p>";  
+            document.getElementById("screen").innerText = " ";
+             hide("timerdiv");
+            document.getElementById("start").innerText="Start Game";
+           
+          
+           
+        }
+    }, 1000);    
+}
+
+        function stopCountdown(){
+    clearInterval(count);   
+}
+        
+function nextpage(){
+    show("instruction");
+    show("screen");
+    show("textarea");
+    show("container");
+    hide("timerdiv");
+    hide("scorediv");
+    document.getElementById("welcome").innerHTML= "";
+    document.getElementById("start").innerText="Start Game";
+    
+}
+        
+   
+        
+        
+        
+        
+document.getElementById("start").onclick = function(){
+    
+   
+        if(playing == false){
+            
+            nextpage();
+            playing = true;
+            
+         }
+            
+        
+        else{
+            
+         
+            
+            if(this.innerText == "Start Game")
+            {
+                startGame();
+                //return;
+                
+            }else{
+                location.reload();
+            }
+            
+            
+        
+            
+        }
+        
+        
+    
+        
+        
+    }
+    
+             
+        
+        
+
+
+
+function startGame(){
+        //set score to 0
+        show("scorediv");
+    show ("textarea");
+        show("text");
+         score = 0;
+      
+        show("timerdiv");
+        timeremaining = 60;
+        document.getElementById("timerdiv").innerHTML = "Time" + " "+ "left:"+ timeremaining;
+        
+        //hide game over box
+        
+        hide("gameover");
+        
+        //change start button to reset
+        document.getElementById("start").innerText = "Reset Game";
+        
+        //start countdown
+        
+        startCountdown();
+       
+        
+        //generate a new Word
+        generateWord();
+        
+        
+    }   
+
+var words 
+function generateWord(){
+    
+     
+    var randomIndex = Math.floor(Math.random() * words.length);
+    document.getElementById("screen").innerText = words[randomIndex];
+    
+}
+
+function checkWord(){
+    var displayedWord = document.getElementById("screen").innerText;
+    var typedWord = document.getElementById("text").value;
+    console.log(displayedWord);
+    
+    if(displayedWord.length == typedWord.length){
+        
+        if(displayedWord == typedWord ){
+
+                show("right");
+                hide("wrong");
+                score += 5;
+                document.getElementById("scorevalue").innerText = score;
+            setTimeout(function(){
+                hide("right")
+            },1000)
+            generateWord();
+            clearTextArea();
+
+
+        }else{
+                show("wrong");
+                hide("right");
+
+
+            setTimeout(function(){
+                hide("wrong");
+            },1000)
+
+        }
+    }
+        
+}
+    
+var textarea = document.getElementById("text");
+        textarea.onkeyup = function(){
+            
+            checkWord();
+            
+        }
+    
+    
+    
+
+    function clearTextArea(){
+        document.getElementById("text").value = "";
+    }
+    
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    </body>
+
+</html>

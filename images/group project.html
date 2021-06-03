@@ -1,0 +1,123 @@
+
+<!Doctype html>
+
+<html>
+    <head>
+        <title>Math Game App</title>
+        <style>
+            html{
+                position: static;
+            }
+            .gamebody{
+                width: 800px;
+                height: 500px;
+                background-color: cornflowerblue;
+                margin: auto;
+                padding-top: 30px;
+                margin-top: 50px;
+                margin-bottom: 40px;
+            }
+            #screendiv{
+                width: 90%;
+                height: 42%;
+                 background-color: aqua;
+                margin: auto;
+                margin-bottom: 20px;
+                color: blue;
+                text-align: center;
+                font-size: 90px;
+                line-height: 200px;
+                
+            }
+            
+            #instructiondiv{
+                width: 90%;
+                height: 20%;
+                background-color: rebeccapurple;
+               color: white;
+                text-align: center;
+                margin: auto;
+                margin-bottom: 20px;
+                font-size: 20px;
+                line-height: 56px;
+            }
+            #inputdiv{
+                 width: 90%;
+                height: 20%;
+                background-color: darkblue;
+                margin: auto;
+                text-align: center;
+                line-height: 172px;
+            }
+            #text{
+                width: 95%;
+                height: 80%;
+                border: none;
+            }
+            #scorediv{
+                width: 150px;
+                height: 50px;
+                background-color: rebeccapurple;
+                position: absolute;
+                left: 440px; 
+                top: 80px;
+                font-size: 25px;
+                text-align: center;
+                line-height: 42px;
+                color: white;
+            }
+            #timerdiv{
+                width: 150px;
+                height: 50px;
+                background-color: royalblue;
+                position: absolute;
+                left: 1010px; 
+                top: 80px;
+                font-size: 25px;
+                text-align:center;
+                line-height: 42px;
+                color: white;
+            }
+            #correctdiv, #wrongdiv{
+                width: 700px;;
+                height: 100px;
+                background-color: blue;
+               color: white;
+                text-align: center;
+                margin: auto;
+                margin-bottom: 20px;
+                font-size: 20px;
+                line-height: 56px;
+            }
+            #wrongdiv{
+                background-color: red;
+            }
+            
+        
+        </style>
+    </head>
+    
+        
+    <body>
+        <div id="scorediv">Score: <span>0</span></div>
+        <div id="timerdiv">Time left: <span>0</span></div>
+        <div class="gamebody">
+            <div id="screendiv">
+                Text here
+            </div>
+            <div id="instructiondiv">This will contain the instruction</div>
+            <div id="inputdiv">
+                <textarea rows="2" cols="50" id="text"></textarea>
+            </div>
+        
+        
+        </div>
+        <div id="correctdiv">correct</div>
+        <div id="wrongdiv">Wrong! try again</div>
+           
+        
+        
+    </body>
+
+    
+</html>
